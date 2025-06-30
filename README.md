@@ -33,9 +33,8 @@ A desktop application built using **Python Tkinter** that simulates a command-li
 ## 🖼️ Screenshot
 
 > Sample UI preview  
-> *(Replace this with an actual screenshot)*
+![image](https://github.com/user-attachments/assets/7db310d0-b0e6-40ef-88c0-67e9d2c21e34)
 
-//img
 
 ---
 
