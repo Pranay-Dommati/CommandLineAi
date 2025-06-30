@@ -11,8 +11,13 @@ import json
 import time
 from pathlib import Path
 
-# Configure your API key
-genai.configure(api_key="AIzaSyCAjkkf4L37uhSZ4jCmTzNcTZ0mQx8uEEI")
+# Configure your API key from environment variable
+api_key = os.getenv("GOOGLE_API_KEY")
+if not api_key:
+    print("Warning: GOOGLE_API_KEY environment variable not set. AI features will not work.")
+    print("Please set your API key: export GOOGLE_API_KEY='your_api_key_here'")
+else:
+    genai.configure(api_key=api_key)
 
 class CommandLineAssistant:
     def __init__(self, root=None):
