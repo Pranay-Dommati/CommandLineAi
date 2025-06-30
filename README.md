@@ -25,9 +25,6 @@ A modern desktop application built using **Python Tkinter** that provides a feat
   - Bold response formatting  
   - Real-time scroll
 
-- 🖼️ **Branding Support**  
-  Add your own logo via `logo.png` on the right-hand side of the app.
-
 ---
 
 ## 🖼️ Screenshot
