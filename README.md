@@ -135,12 +135,6 @@ GEMINIAI_API_KEY=your_google_generative_ai_key
 
 ---
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## 🤝 Contributing
 
 Pull requests are welcome!  
