@@ -1,6 +1,6 @@
-# 🖥️ Command Line Assistant with AI (Gemini Integration)
+# 🖥️ Command Line Pro with AI (Gemini Integration)
 
-A desktop application built using **Python Tkinter** that simulates a command-line interface and integrates **Google's Gemini AI** for intelligent, context-aware responses.
+A modern desktop application built using **Python Tkinter** that provides a feature-rich command-line interface with **Google's Gemini AI** integration for intelligent, context-aware assistance.
 
 ---
 
@@ -43,8 +43,8 @@ A desktop application built using **Python Tkinter** that simulates a command-li
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/command-line-assistant-ai.git
-cd command-line-assistant-ai
+git clone https://github.com/Pranay-Dommati/CommandLineAi.git
+cd CommandLineAi
 ```
 
 ### 2. Install Python Dependencies
@@ -61,19 +61,39 @@ pip install google-generativeai pillow
 
 ### 3. Set Up Gemini AI API Key
 
-Set your Gemini API key as an environment variable.
+You have two options to set your Google API key:
+
+#### Option 1: Environment Variable (Recommended for Production)
+
+Set your Google API key as an environment variable.
 
 **Linux/macOS:**
 
 ```bash
-export GEMINIAI_API_KEY='your_api_key'
+export GOOGLE_API_KEY='your_api_key'
 ```
 
 **Windows (CMD):**
 
 ```cmd
-set GEMINIAI_API_KEY=your_api_key
+set GOOGLE_API_KEY=your_api_key
 ```
+
+**Windows (PowerShell):**
+
+```powershell
+$env:GOOGLE_API_KEY="your_api_key"
+```
+
+#### Option 2: .env File (Convenient for Development)
+
+Create a `.env` file in the project root directory with the following content:
+
+```
+GOOGLE_API_KEY=your_api_key
+```
+
+The application will automatically check for the API key in both locations.
 
 ---
 
@@ -82,7 +102,13 @@ set GEMINIAI_API_KEY=your_api_key
 Run the app with:
 
 ```bash
-python main.py
+python clproject.py
+```
+
+Run in CLI mode (no GUI):
+
+```bash
+python clproject.py --cli
 ```
 
 ### Terminal Actions:
@@ -90,21 +116,24 @@ python main.py
 - Type a command like `cd ..`, `dir`, `ls` and press **Enter**
 - Use `clear` to reset the terminal output area
 
-### Ask Gemini:
+### Use AI Assistant:
 
+- Click the **🤖 AI Assistant** button to toggle the AI panel
 - Type your question in the AI input field (e.g., `Why did my last command fail?`)
-- Press **Enter** or click **Ask AI**
-- Gemini responds with context-aware answers based on your full command history
+- Press **Enter** or click **Send**
+- Gemini responds with context-aware answers based on your command history
 
 ---
 
 ## 📁 Project Structure
 
 ```
-├── main.py               # Main Python script
+├── clproject.py          # Main Python script 
 ├── logo.png              # Logo displayed on the right side of the UI
 ├── README.md             # This documentation file
 ├── requirements.txt      # List of Python dependencies
+├── .env                  # Environment file for API key (not tracked in git)
+├── .gitignore            # Git ignore file (ignores .env file)
 ```
 
 ---
@@ -117,13 +146,25 @@ python main.py
 
 ---
 
-## 🔐 Environment Variable
+## 🔐 API Key Configuration
 
-Before running the app, ensure this environment variable is set:
+Before running the app, ensure you've set up your Google API key using one of these methods:
+
+### Environment Variable (Recommended)
 
 ```bash
-GEMINIAI_API_KEY=your_google_generative_ai_key
+GOOGLE_API_KEY=your_google_generative_ai_key
 ```
+
+### .env File Alternative
+
+Create a `.env` file in the project root:
+
+```
+GOOGLE_API_KEY=your_google_generative_ai_key
+```
+
+Note: The `.env` file is included in `.gitignore` to prevent accidentally committing your API key.
 
 ---
 
